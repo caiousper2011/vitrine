@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-backgroundDefault-white text-zinc-100;
+}
+
+@layer components {
+  .modal {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    @apply shadow-md min-w-[320px]
+    flex
+    flex-col
+    text-light-400
+    duration-1000
+    transition-all
+    rounded
+  }
+
+  .modal-header {
+    background: url('src/assets/map-resized.jpg');
+    background-size: contain;
+    background-position: center;
+    @apply
+    flex
+    min-h-[160px]
+    text-xl
+    text-gray-700
+    justify-center
+    m-[-24px]
+    mb-6
+    rounded
+    items-end
+  }
+  .modal-header-content {
+    background: linear-gradient(0deg,#fff 25%,hsla(0,0%,100%,.1));
+    @apply
+    flex
+    flex-1
+    h-20
+    items-end
+    justify-center
+  }
+  .modal-overlay {
+    background-color: rgba(120,120,120, 0.8);
+    @apply
+    text-zinc-100 
+    flex 
+    items-center 
+    w-[100vw] 
+    h-[100vh] 
+    fixed 
+    justify-center 
+    z-10 
+    top-0 
+    left-0
+    
+  }
+  .modal-content {
+    @apply
+    py-4
+    flex-1
+    overflow-y-auto
+    mx-[-24px]
+    p-6
+    pt-0
+  }
+  .modal-footer {
+    @apply 
+    w-[100%]
+    flex
+    gap-2
+    pt-6
+  }
+}
